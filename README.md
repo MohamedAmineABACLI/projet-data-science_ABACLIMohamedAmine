@@ -1,65 +1,35 @@
 # projet-data-science_ABACLIMohamedAmine
 
-Titanic Survival Prediction
+Titre du projet : Prédiction de survie sur le Titanic
 
-This project aims to predict the survival of passengers aboard the Titanic using machine learning techniques.
+Description du projet : Dans ce projet, nous allons construire un modèle de machine learning capable de prédire la survie des passagers à bord du Titanic. Nous allons utiliser un ensemble de données qui contient des informations sur les passagers, telles que leur âge, leur sexe, leur classe de billet et le tarif qu'ils ont payé pour leur voyage. Nous allons entraîner plusieurs modèles de classification et choisir le modèle le plus performant pour faire des prédictions sur un ensemble de données de test.
 
-Getting Started
+Guide d'utilisation :
 
-The first step is to download the Titanic dataset from Kaggle (https://www.kaggle.com/c/titanic/data) and extract the files into a directory named data. The dataset contains a training set and a test set in CSV format.
+Téléchargez le jeu de données à partir de Kaggle.
+Ouvrez le notebook Jupyter et importez les bibliothèques nécessaires.
+Chargez l'ensemble de données dans un dataframe Pandas.
+Effectuez une analyse exploratoire des données et nettoyez les données en remplaçant les valeurs manquantes et en supprimant les colonnes inutiles.
+Divisez les données en ensembles de formation et de test.
+Initialisez les modèles de classification que vous souhaitez entraîner et utilisez la validation croisée pour évaluer leurs performances.
+Sélectionnez le modèle le plus performant et entraînez-le sur l'ensemble de formation.
+Utilisez le modèle entraîné pour faire des prédictions sur l'ensemble de données de test.
+Créez un fichier de soumission contenant les prédictions et la colonne PassengerId pour soumettre les résultats sur Kaggle.
 
-Prerequisites
+Exemple d'utilisation :
 
-This project requires Python 3 and the following libraries:
+Chargement des données : Nous avons chargé les données à partir d'un fichier CSV dans un dataframe Pandas en utilisant la fonction read_csv().
 
-pandas
-numpy
-sklearn
-xgboost
+Analyse exploratoire des données : Nous avons utilisé différentes visualisations pour mieux comprendre les données, telles que des diagrammes de dispersion pour montrer les relations entre différentes variables et des diagrammes en boîte pour montrer les distributions.
 
-You can install these libraries using pip:
+Nettoyage des données : Nous avons remplacé les valeurs manquantes dans les colonnes 'Age' et 'Fare' en utilisant la moyenne des valeurs existantes et supprimé les colonnes inutiles telles que 'Ticket', 'Cabin' et 'Name'. Nous avons également converti les valeurs de la colonne 'Sex' en valeurs numériques et utilisé un encodeur one-hot pour convertir les valeurs de la colonne 'Embarked' en valeurs numériques.
 
-Copy code
-pip install pandas numpy scikit-learn xgboost
+Entraînement de modèles : Nous avons entraîné plusieurs modèles de classification, tels que la régression logistique, l'arbre de décision, la forêt aléatoire et le SVM, en utilisant la validation croisée pour évaluer leurs performances.
 
-Data Preparation
+Sélection du modèle : Nous avons choisi le modèle GradientBoostingClassifier comme étant le plus performant.
 
-The data preparation process involves loading the dataset into memory, exploring the data, and cleaning it.
+Faire des prédictions : Nous avons utilisé le modèle entraîné pour faire des prédictions sur l'ensemble de données de test et avons créé un fichier de soumission pour soumettre les résultats sur Kaggle.
 
-The data exploration step involves checking for null values and understanding the distribution of features in the dataset.
+Conclusion : 
 
-The data cleaning step involves filling in missing values, transforming categorical variables, and removing irrelevant features.
-
-The data is then split into a training set and a testing set for model evaluation.
-
-Model Selection
-
-The model selection step involves evaluating the performance of different machine learning algorithms on the training set using cross-validation.
-
-The following models were evaluated:
-
-Logistic Regression
-Decision Tree
-Random Forest
-SVM
-XGBoost
-Gradient Boosting Classifier
-AdaBoost Classifier
-
-The model with the highest accuracy score on the cross-validation set was selected for further evaluation.
-
-Model Evaluation
-
-The selected model was trained on the entire training set and evaluated on the testing set.
-
-The evaluation metrics used were accuracy, precision, recall, and F1 score.
-
-Prediction and Submission
-
-The final step is to generate predictions for the test set using the selected model and create a submission file for Kaggle.
-
-The submission file contains the PassengerId column and the predicted survival values.
-
-Conclusion
-
-This project demonstrates the process of building a machine learning model for survival prediction on the Titanic dataset. By following this process, it is possible to achieve high accuracy on the test set and create a submission file for Kaggle.
+Ce projet a montré comment utiliser les techniques de machine learning pour prédire la survie des passagers à bord du Titanic. En utilisant des visualisations, des techniques de nettoyage de données et la validation croisée, nous avons pu entraîner plusieurs modèles et choisir le modèle le plus performant pour faire des prédictions précises sur l'ensemble de données de test.
